@@ -1,3 +1,4 @@
+
 from telethon import TelegramClient, events, Button
 from download_from_url import download_file, get_size
 from file_handler import send_to_transfersh_async, progress
@@ -20,15 +21,14 @@ bot = TelegramClient('Uploader bot', api_id, api_hash).start(bot_token=bot_token
 async def start(event):
     """Send a message when the command /start is issued."""
     dict_ = {
-            
-            
-             "🤖 Developer":"https://t.me/PARVSHAH_01",
-            "👨🏻‍💻 JOIN ":https://t.me/Real_Giveawayzz"}
-
+            "📢 Bot Updates":"https://t.me/Real_Giveawayzz",
+            "👥 Support":"https://t.me/Realgiveawayzchat",
+            "🤖 Developer":"https://t.me/PARVSHAH_01",
+            "👨🏻‍💻 Join":"https://t.me/Real_Giveawayzz"}
     buttons = [[Button.url(k, v)] for k,v in dict_.items()]
 
-    await event.respond('Hi!\nMy Name Is Transfer Uploader Bot Sent any file or direct download link to upload and get the transfer.sh download link Bot Made by @AmiFutami', buttons=buttons)
-    raise events.StopPropagation
+    await event.respond('Hi!\nMy Name Is Transfer Uploader Bot Sent any file or direct download link to upload and get the transfer.sh download link Bot Made by @PARVSHAH_01', buttons=buttons)
+    raise events.StopPropagatio
 
 @bot.on(events.NewMessage)
 async def echo(update):
